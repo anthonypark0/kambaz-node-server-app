@@ -1,5 +1,5 @@
 export default [
-    [
+    
         {
           "_id": "RS101",
           "name": "Rocket Propulsion",
@@ -83,4 +83,4 @@ export default [
           "author": "654f9ec2ea7ead465908d1e3"
         }
       ]
-    ]
+    

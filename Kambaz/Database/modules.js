@@ -1,5 +1,5 @@
 export default [
-    [
+    
         {
           "_id": "M101",
           "name": "Introduction to Rocket Propulsion",
@@ -115,4 +115,3 @@ export default [
           "course": "RS103"
         }
       ]
-]
