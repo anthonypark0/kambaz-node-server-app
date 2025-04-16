@@ -21,12 +21,6 @@ export default function EnrollmentRoutes(app) {
     res.sendStatus(200);
   });
 
-  app.get("/api/users/:userId/enrollments", (req, res) => {
-    const userId = req.params.userId;
-    const enrollments = dao.findEnrollmentsForUser(userId);
-    res.json(enrollments);
-  });
-
   app.get("/api/enrollments", (req, res) => {
     res.json(dao.findAllEnrollments());
   });
