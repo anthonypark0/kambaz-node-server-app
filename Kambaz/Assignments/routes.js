@@ -22,9 +22,9 @@ export default function AssignmentRoutes(app) {
     else res.sendStatus(404);
   });
 
-  app.delete("/api/assignments/:id", (req, res) => {
-    const success = dao.deleteAssignment(req.params.id);
-    if (success) res.sendStatus(200);
-    else res.sendStatus(404);
+  app.delete("/api/assignments/:assignmentId", async (req, res) => {
+    const { assignmentId } = req.params;
+    const success = await dao.deleteAssignment(assignmentId);
+    res.send(success);
   });
 }

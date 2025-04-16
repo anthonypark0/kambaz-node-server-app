@@ -31,10 +31,12 @@ export function updateAssignment(id, updatedAssignment) {
 }
 
 export function deleteAssignment(id) {
+    return model.deleteOne({ _id: id });
+    /*
   const index = Database.assignments.findIndex(a => a._id === id);
   if (index !== -1) {
     Database.assignments.splice(index, 1);
     return true;
   }
-  return false;
+  return false;*/
 }
