@@ -1,10 +1,13 @@
 import Database from "../Database/index.js";
 import model from "./model.js";
+import { v4 as uuidv4 } from "uuid";
 export function createAssignment(assignment) {
-  const newAssignment = { ...assignment, _id: new Date().getTime().toString() };
-  Database.assignments.push(newAssignment);
-  return newAssignment;
+  const newAssignment = { ...assignment, _id: uuidv4() };
+  return model.create(newAssignment);
+ // Database.assignments.push(newAssignment);
+ // return newAssignment;
 }
+
 
 export function findAssignmentsForCourse(courseId) {
     return model.find({ course: courseId });
